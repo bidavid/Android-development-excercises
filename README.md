@@ -1,1 +1,1 @@
-Kotlin excercise. A simple TV show search application that uses https://www.tvmaze.com/api api shown in laboratory exercises template, and additionally provides details for each show. (Using Retrofit and ViewPager)
+Kotlin excercise - addition to simple TV show search application shown in laboratory exercises template that uses https://www.tvmaze.com/api api, and additionally provides details for each show. (Using Retrofit and ViewPager)
