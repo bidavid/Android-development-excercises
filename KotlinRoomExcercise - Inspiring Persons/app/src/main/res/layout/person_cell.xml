@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/ivPersonPicture"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_launcher_background"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tvPersonFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/ivPersonPicture"
+        app:layout_constraintEnd_toStartOf="@id/tvPersonLastName"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="5dp"
+        android:textSize="15sp"
+        android:text="Ime"
+        android:textColor="@color/Black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvPersonLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tvPersonFirstName"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="5dp"
+        android:textSize="15sp"
+        android:textColor="@color/Black"
+        android:text="Prezime"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvPersonBirthDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/ivPersonPicture"
+        app:layout_constraintTop_toBottomOf="@id/tvPersonFirstName"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:textSize="15sp"
+        android:text="Rodenje"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/tvDateDash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tvPersonBirthDate"
+        app:layout_constraintTop_toBottomOf="@id/tvPersonFirstName"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:textSize="15sp"
+        android:text="-"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/tvPersonDeathDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tvDateDash"
+        app:layout_constraintTop_toBottomOf="@id/tvPersonFirstName"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:textSize="15sp"
+        android:text="Smrt"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/tvPersonDescription"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/ivPersonPicture"
+        app:layout_constraintTop_toBottomOf="@id/tvPersonBirthDate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:textSize="15sp"
+        android:text="Opis....."
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textStyle="italic"/>
+
+    <ImageView
+        android:id="@+id/ivEditButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvPersonDescription"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/ic_edit"
+        android:scaleType="centerCrop"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

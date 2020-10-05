@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="counterVM"
+            type="gg.bidavid.lv4_birdcounter.CounterViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tvCounter"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="@{counterVM.birdCounter.toString()}"
+            android:background="@{context.getColor(counterVM.currentColourID)}"
+            android:textSize="20sp"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btnRed"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnBlue"
+            app:layout_constraintTop_toBottomOf="@+id/tvCounter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="15dp"
+            android:src="@drawable/ic_bird"
+            android:background="@color/Red"
+            app:borderWidth="0dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/btnRed"
+            app:layout_constraintEnd_toStartOf="@+id/btnGreen"
+            app:layout_constraintTop_toBottomOf="@+id/tvCounter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="15dp"
+            android:src="@drawable/ic_bird"
+            android:backgroundTint="@color/Blue"
+            app:borderWidth="0dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/btnBlue"
+            app:layout_constraintEnd_toStartOf="@+id/btnYellow"
+            app:layout_constraintTop_toBottomOf="@+id/tvCounter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="15dp"
+            android:src="@drawable/ic_bird"
+            android:backgroundTint="@color/Green"
+            app:borderWidth="0dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnYellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/btnGreen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCounter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="15dp"
+            android:src="@drawable/ic_bird"
+            android:backgroundTint="@color/Yellow"
+            app:borderWidth="0dp"/>
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/Black"
+            android:textColor="@color/White"
+            android:text="RESET"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
